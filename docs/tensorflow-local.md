@@ -50,7 +50,7 @@ pip install numpy scipy
 
 - **Start** 를 누릅니다. 
 
-- The output will be printed in the console.
+- 콘솔창에 결과가 나타납니다.
 
 ![콘솔에서 도출된 예제](./media/tensorflow-local/console-output.png)
 
