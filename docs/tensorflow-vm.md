@@ -1,21 +1,21 @@
-# Train a TensorFlow model in the cloud
-In this tutorial, we will train a TensorFlow model using the [MNIST dataset](http://yann.lecun.com/exdb/mnist/) in an Azure [Deep Learning Virtual Machine](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/deep-learning-dsvm-overview). 
+# 클라우드에서 텐서플로우 모델 훈련하기
+본 강의에서는 Azure [Deep Learning Virtual Machine](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/deep-learning-dsvm-overview)의 [MNIST 데이터 셋](http://yann.lecun.com/exdb/mnist/)을 사용하여 텐서플로우 모델을 훈련하도록 하겠습니다. 
 
-The MNIST database has a training set of 60,000 examples, and a test set of 10,000 examples of handwritten digits.
+MNIST 데이터베이스는 6만개의 예제 훈련 세트와 수기로 짠 1만개의 예제 테스트 셋을 담고 있습니다.
 
-## Prerequisites
-Before you begin, ensure you have the following installed and configured:
+## 사전 준비
+시작하기 전에 다음의 사항들이 설치 또는 설정되어 있는 지 확인해주세요.
 
-### Download sample code
-Download this [GitHub repository](https://github.com/Microsoft/samples-for-ai) containing samples for getting started with deep learning across TensorFlow, CNTK, Theano and more.
+### 샘플코드 내려받기
+텐서플로우, CNTK, Theano 등등을 통해 딥러닝을 시작할 수 있는 샘플을 담고 있는 본 [깃허브 리포지토리](https://github.com/Microsoft/samples-for-ai)를 내려받아 주세요.
 
-### Setup Azure Deep Learning Virtual Machine
-Please read instructions for [setting up Deep Learning Virtual Machine](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/provision-deep-learning-dsvm). 
+### 애저 딥러닝 가상 머신 설정하기
+[딥러닝 가상머신 설정하기](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/provision-deep-learning-dsvm) 안내서를 읽어주세요. 
 
-> [!NOTE] 
-> Set **Location** to US West 2 (or others which have Deep Learning VM) and **OS type** as Linux.
+> [!주의] 
+> **Location**을 US West 2 (또는 딥러닝 VM을 갖춘 다른 지역)으로 맞춰주시고 **OS type** 은 Linux 해주세요.
 
-### Update .bashrc to Enable Remote Job Submission via Non-interactive Bash Session
+### .bashrc 를 업데이트 하셔서 Non-interactive Bash Session을 통해 Remote Job Submission 이 가능하게 해주세요
 Login to your Deep Learning VM using a tool like Putty or similar. Execute below to modify your bashrc file to enable remote deep learning job submission (configures remote behavior to work just like if you logged into the VM).
 
 ```bash
